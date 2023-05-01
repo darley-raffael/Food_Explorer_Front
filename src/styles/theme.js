@@ -4,6 +4,7 @@ export default {
     BG_DARK_900: "#0D1D25",
     BG_DARK_800: "#0D161B",
     BG_DARK_700: "#001119",
+    BG_DARK_600: "#00111A",
     BG_DARK_500: "#000C12",
     BG_DARK_400: "#000A0F",
     BG_DARK_300: "#000204",

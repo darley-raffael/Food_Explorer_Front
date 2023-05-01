@@ -22,9 +22,23 @@ export default createGlobalStyle`
     
     a{
         text-decoration: none;
+        color: ${({ theme }) => theme.COLORS.BG_LIGHT_100};
+        width: 100%;
+        text-align: center;
     }
+    
+    // Estilos button
     button{
         border: none;
+    }
+    .bg-tomato-100{
+        background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_100};
+    }
+    .bg-tomato-200{
+        background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_200};
+    }
+    .bg-tomato-400{
+        background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_400};
     }
 
     button, a{

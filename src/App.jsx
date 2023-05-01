@@ -1,12 +1,15 @@
-import { Button } from "./components/Button";
-import { Input } from "./components/Input";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Logo } from "./components/Logo"
 
 export function App() {
 
   return (
     <>
-      <Input label="Nome" type="text" title="Nome" placeholder="digite seu nome " />
-      <Button title="Botão" />
+      <Header isAdmin />
+      <Logo />
+      <Footer />
+
     </>
   )
 }
