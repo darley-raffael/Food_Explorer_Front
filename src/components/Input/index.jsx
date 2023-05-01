@@ -1,14 +1,21 @@
 import { Container } from "./styles";
 
 
-export function Input({ label, type, title, ...rest }) {
+
+export function Input({ label, icon: Icon, type, title, ...rest }) {
 
   return (
     <Container>
       <label htmlFor={label}>
         {title}
       </label>
-      <input type={type} id={label} {...rest} />
+      <div>
+
+        {
+          Icon && <Icon size={20} />
+        }
+        <input type={type} id={label} {...rest} />
+      </div>
     </Container>
   )
 }

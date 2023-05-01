@@ -10,8 +10,18 @@ export const Container = styled.button`
     font-weight: 500;
     font-size: 1.4rem;
 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		gap: .6rem;
+
     &:disabled{
         opacity: 0.5;
         cursor: not-allowed;
     }
+`
+
+export const Icon = styled.img`
+	width: 2rem;
 `

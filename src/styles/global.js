@@ -26,6 +26,10 @@ export default createGlobalStyle`
         width: 100%;
         text-align: center;
     }
+
+    ul{
+        list-style: none;
+    }
     
     // Estilos button
     button{
