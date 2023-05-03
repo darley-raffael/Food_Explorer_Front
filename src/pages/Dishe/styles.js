@@ -63,7 +63,7 @@ export const Content = styled.div`
       align-items: center;
       align-content: center;
       flex-wrap: wrap;
-      gap: 2.8rem;
+      gap: 2.4rem;
     }
   }
 

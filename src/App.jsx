@@ -1,10 +1,10 @@
-import { Dishe } from "./pages/Dishe";
+import { Home } from "./pages/Home";
 
 export function App() {
 
   return (
     <>
-      <Dishe />
+      <Home />
     </>
   )
 }
