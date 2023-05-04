@@ -54,7 +54,7 @@ export default createGlobalStyle`
         filter: brightness(.9);
     }
 
-    legend, button, a, h3{
+    legend, button, a, h4, h3, p{
         font-family: "Poppins", sans-serif;
     }
 `
