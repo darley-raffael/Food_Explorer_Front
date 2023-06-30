@@ -8,6 +8,7 @@ export default {
     BG_DARK_500: "#000C12",
     BG_DARK_400: "#000A0F",
     BG_DARK_300: "#000204",
+    BG_DARK_200: "#00070A",
     BG_DARK_920: "#00070A",
 
     BG_LIGHT_100: "#FFFfFf",
@@ -23,10 +24,9 @@ export default {
     TINTS_TOMATO_300: "#AB222E",
     TINTS_TOMATO_400: "#AB4D55",
 
-
     TINTS_CARROT_100: "#FBA94C",
     TINTS_MINT_100: "#04D361",
     TINTS_CAKE_200: "#82F3FF",
     TINTS_CAKE_100: "#065E7C",
-  }
-}
+  },
+};

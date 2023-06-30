@@ -1,29 +1,25 @@
 import styled from "styled-components";
 
-
 export const Main = styled.main`
   margin-top: 1.5rem;
+  margin-bottom: 6.2rem;
 
-  .content{
+  .content {
     height: 15rem;
     position: relative;
 
     display: flex;
 
-
-    img{
+    img {
       position: absolute;
       width: 19.1rem;
-
     }
 
-    .content-box{
+    .content-box {
       height: 12rem;
 
       background: linear-gradient(180deg, #091e26 0%, #00131c 100%);
-      border-radius: .3rem;
-
-
+      border-radius: 0.3rem;
 
       position: absolute;
       left: 3rem;
@@ -31,12 +27,12 @@ export const Main = styled.main`
       bottom: 0;
       right: 1.6rem;
 
-      padding:  3.6rem 2.2rem 2.1rem 15.3rem ;
+      padding: 3.6rem 2.2rem 2.1rem 15.3rem;
 
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: .3rem;
+      gap: 0.3rem;
 
       > h4 {
         color: ${({ theme }) => theme.COLORS.BG_LIGHT_300};
@@ -44,12 +40,11 @@ export const Main = styled.main`
         font-weight: 600;
         line-height: 140%;
       }
-      > p{
+      > p {
         color: ${({ theme }) => theme.COLORS.BG_LIGHT_300};
         font-size: 1.2rem;
         line-height: 140%;
       }
-      
     }
-  }  
-`
+  }
+`;

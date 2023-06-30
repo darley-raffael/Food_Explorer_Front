@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 export default createGlobalStyle`
     :root{
         font-size: 62.5%;
@@ -27,11 +26,12 @@ export default createGlobalStyle`
         text-align: center;
     }
 
+
     ul{
         list-style: none;
     }
     
-    // Estilos button
+    //  Styles button
     button{
         border: none;
     }
@@ -54,7 +54,7 @@ export default createGlobalStyle`
         filter: brightness(.9);
     }
 
-    legend, button, a, h4, h3, p{
+     button, a, h4, h3, h2, p{
         font-family: "Poppins", sans-serif;
     }
-`
+`;
