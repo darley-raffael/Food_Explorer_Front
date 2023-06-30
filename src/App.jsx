@@ -1,11 +1,9 @@
-import { Home } from "./pages/Home";
-
+import { New } from "./pages/New";
 
 export function App() {
-
   return (
     <>
-      <Home />
+      <New />
     </>
-  )
+  );
 }
