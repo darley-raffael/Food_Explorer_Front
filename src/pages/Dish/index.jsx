@@ -1,23 +1,19 @@
 import { Content, ImgDish, Main, OrderDish } from "./styles";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import setLeft from "../../assets/set_left.svg";
 import saladDish from "../../assets/Mask_group.png";
 import { CounterDishes } from "../../components/CounterDishes";
 import { Button } from "../../components/Button";
 import iconOrder from "../../assets/order-icon.svg";
 import { Tags } from "../../components/Tags";
+import { BackButton } from "../../components/BackButton";
 
 export function Dish() {
   return (
     <>
       <Header />
       <Main>
-        <a href="#">
-          <img src={setLeft} alt="seta navegação esquerda" />
-          <span>voltar</span>
-        </a>
-
+        <BackButton />
         <ImgDish src={saladDish} />
 
         <Content>

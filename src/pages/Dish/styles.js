@@ -9,23 +9,6 @@ export const Main = styled.main`
   display: grid;
   place-items: center;
   gap: 1.6rem;
-
-  > a {
-    color: ${({ theme }) => theme.COLORS.BG_LIGHT_300};
-    font-weight: 500;
-
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-
-    img {
-      padding: 0.5rem 1rem;
-    }
-
-    span {
-      font-size: 2.4rem;
-    }
-  }
 `;
 
 export const ImgDish = styled.img`
