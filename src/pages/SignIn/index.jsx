@@ -1,14 +1,14 @@
 import { Container, Form } from "./styles";
-import { Logo } from "../../components/Logo"
-import { Input } from "../../components/Input"
-import { Button } from "../../components/Button"
+import { Logo } from "../../components/Logo";
+import { Input } from "../../components/Input";
+import { Button } from "../../components/Button";
 
 export function SignIn() {
-
   return (
-    <Container >
+    <Container>
       <Logo />
-      <Form >
+      <Form>
+        <div className="title-signin">Faça Login</div>
         <Input
           label="email"
           type="email"
@@ -25,5 +25,5 @@ export function SignIn() {
         <a href="#">Criar uma conta</a>
       </Form>
     </Container>
-  )
+  );
 }

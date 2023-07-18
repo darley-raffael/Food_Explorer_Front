@@ -1,8 +1,9 @@
-import { Edit } from "./pages/Edit";
+import { Home } from "./pages/Home";
+
 export function App() {
   return (
     <>
-      <Edit />
+      <Home />
     </>
   );
 }

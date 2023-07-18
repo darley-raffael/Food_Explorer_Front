@@ -7,8 +7,9 @@ export const Container = styled.div`
   align-items: stretch;
 
   padding: 15.8rem 5.5rem;
+
   @media (max-width: 768px) {
-    .title-signup {
+    .title-signin {
       display: none;
     }
   }
@@ -19,7 +20,7 @@ export const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    .title-signup {
+    .title-signin {
       font-size: 3.2rem;
       width: 100%;
       text-align: center;
