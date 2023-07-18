@@ -1,48 +1,59 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
 
-  padding: 15.8rem 5.5rem;
+  > div {
+    padding-block: 5rem;
+    max-width: 47.6rem;
 
-  @media (max-width: 768px) {
-    .title-signin {
-      display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 2rem;   
+
+    h1 {
+      font-size: clamp(3.2rem, 1rem + 5vw, 4.2rem);
     }
   }
 
   @media (min-width: 768px) {
-    padding: 10rem 13rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    .title-signin {
-      font-size: 3.2rem;
-      width: 100%;
-      text-align: center;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    width: 120rem;
   }
-`;
+`
 
 export const Form = styled.form`
-  margin-top: 7.3rem;
+  margin-inline: auto;
+  padding-block: 6.4rem;
+  padding-inline: 2.4rem;
+  border-radius: 1.6rem;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+  max-width: 47.6rem;
+  height: fit-content;
+
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 3.2rem;
 
-  @media (min-width: 768px) {
-    max-width: 48rem;
-    background-color: ${({ theme }) => theme.COLORS.BG_DARK_700};
-    padding: 6.4rem;
-    border-radius: 16px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-  }
-`;
+> legend {
+  font-size: 3.2rem;
+  text-align: center;
+}
+
+> a {
+  color: ${({ theme }) => theme.COLORS.WHITE};
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  margin-inline: 0;
+  padding: 6.4rem;
+}
+`

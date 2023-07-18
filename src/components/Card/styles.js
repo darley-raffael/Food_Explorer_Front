@@ -1,53 +1,94 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 24rem;
-  padding: 2.4rem;
+  width: 30rem;
+  height: 51.2rem;
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
+  border-radius: 0.8rem;
 
-  border-radius: 8px;
-  border: 1px solid ${({ theme }) => theme.COLORS.BG_DARK_300};
-  background-color: ${({ theme }) => theme.COLORS.BG_DARK_200};
-
-  display: grid;
-  gap: 1.2rem;
-  place-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
   flex: none;
 
-  > h2 {
-    font-size: clamp(1.4rem, 1rem + 1vw, 3.2rem);
-    color: ${({ theme }) => theme.COLORS.BG_LIGHT_300};
-    line-height: 24px;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  > div {
-    font-size: 2rem;
-    text-align: center;
-    color: ${({ theme }) => theme.COLORS.TINTS_CAKE_200};
-    line-height: 100%;
-  }
-
-  .icon-favorite {
+  > button:first-child {
+    display: flex;
     position: absolute;
-    right: 1.6rem;
-    top: 1.6rem;
+    top: 2.1rem;
+    right: 2.1rem;
+
+    background: none;
+    border: none;
+
+    svg {
+      fill: ${({ theme, isFavorite }) => isFavorite ? theme.COLORS.RED : theme.COLORS.WHITE};
+    }
   }
-`;
 
-export const ImageDish = styled.img`
-  width: 10rem;
-  height: 10rem;
-  flex-shrink: 0;
-`;
+  > div:nth-child(2) {
+    width: 17.6rem;
+    height: 17.6rem;
+    img {
+      width: 100%;
+    }
+  }
 
-export const NavQuantity = styled.nav`
-  width: 100%;
+  > a {
+    h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 1.8rem;
+    font-size: 2.4rem;
+    font-weight: 700;
 
-  display: grid;
-  gap: 1.8rem;
-  place-items: center;
-`;
+    color: ${({ theme }) => theme.COLORS.WHITE};
+
+    display: flex;
+    align-items: center;
+    }
+  }
+
+  > p {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-inline: 4rem;
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+
+  > strong {
+    font-size: 3.2rem;
+    color: ${({ theme }) => theme.COLORS.LIGHT_GREEN};
+    margin-block: 1.6rem;
+  }
+
+  > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    width: 22rem;
+
+    position: relative;
+    z-index: 10;
+
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    
+    .btn {
+      background: none;
+      border: none;
+      color: ${({ theme }) => theme.COLORS.WHITE};
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      z-index: 6;
+    }
+
+  }
+`

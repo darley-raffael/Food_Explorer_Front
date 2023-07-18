@@ -1,50 +1,60 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
-  margin-top: 1.5rem;
-  margin-bottom: 6.2rem;
+export const Container = styled.div`
+  width: 100%;
+  margin-inline: auto;
+`
 
-  .content {
-    height: 15rem;
-    position: relative;
+export const Content = styled.div`
+  max-width: 136.8rem;
+  flex: 1;
+  
+  @media (min-width: 768px) {
+    padding-inline: 12.3rem;
+    margin-inline: auto;
+  }
+`
 
+export const Slogan = styled.div`
+  margin-top: 3rem;
+  margin-inline: auto;
+  padding-inline: 4rem;
+  margin-bottom: 4.8rem;
+  > img {
+    width: 100%;
+  }
+  
+  > div {
+    margin-top: 2rem;
+     h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: clamp(2.6rem, 1rem + 3vw, 4rem);
+      margin-bottom: 0.8rem;
+     }
+     p {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+     }
+  }
+
+  @media (min-width: 1224px) {
+    height: 26rem;
+    margin-top: 16.4rem;
+    border-radius: 0.8rem;
+    justify-content: flex-end;
+    background: linear-gradient(180deg, #091E26 0%, #00131C 100%);
     display: flex;
-
-    img {
+    align-items: center;
+    position: relative;
+    > img {
+      width: max(63.2rem);
       position: absolute;
-      width: 19.1rem;
-    }
-
-    .content-box {
-      height: 12rem;
-
-      background: linear-gradient(180deg, #091e26 0%, #00131c 100%);
-      border-radius: 0.3rem;
-
-      position: absolute;
-      left: 3rem;
-      z-index: -1;
       bottom: 0;
-      right: 1.6rem;
-
-      padding: 3.6rem 2.2rem 2.1rem 15.3rem;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.3rem;
-
-      > h4 {
-        color: ${({ theme }) => theme.COLORS.BG_LIGHT_300};
-        font-size: 1.8rem;
-        font-weight: 600;
-        line-height: 140%;
-      }
-      > p {
-        color: ${({ theme }) => theme.COLORS.BG_LIGHT_300};
-        font-size: 1.2rem;
-        line-height: 140%;
-      }
+      left: -5rem;
+    }
+    > div {
+      margin-top: 0;
     }
   }
-`;
+`

@@ -1,34 +1,94 @@
-import { Container, HeaderLogo, Menu, Orders } from "./styles";
-import menuOpen from "../../assets/menu-open.svg"
-import ordersIcon from "../../assets/order-icon.svg"
-import { Logo } from "../Logo";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FiSearch, FiLogOut, FiMenu, FiX } from "react-icons/fi";
 
-export function Header({ isAdmin }) {
+import logo from "../../assets/logo.svg";
+import receipt from "../../assets/receipt.svg";
+import { useAuth } from "../../hooks/auth";
+import { useCart } from "../../hooks/cart";
+
+import {
+  Container,
+  Content,
+  Logo,
+  Nav,
+  Favorites,
+  NewDish,
+  Search,
+  Button,
+  Logout,
+} from "./styles";
+
+export function Header({ search, functionButton }) {
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
+
+  const { user, signOut } = useAuth();
+  const { cart, orders } = useCart();
+  const navigate = useNavigate();
+
+  const isCartIsEmpty = cart.length === 0;
+
+  function handleGoToCart() {
+    navigate("/cart");
+  }
+
+  function handleGoToOrders() {
+    navigate("/orders");
+  }
 
   return (
-    <Container >
-      <Menu >
-        <img src={menuOpen} alt="ícone de três linhas  horizontais do menu hamburguer" />
-      </Menu>
-
-      <HeaderLogo >
-        <Logo
-          size="2.4rem"
-          fontSize="2.2rem"
-          justify="center"
-          gap=".8rem"
-        >
-          {
-            isAdmin ? <div>admin</div> : null
-          }
+    <Container>
+      <Content>
+        <Logo to="/">
+          <img src={logo} alt="polígono azul" />
+          <strong>food explorer</strong>
         </Logo>
-      </HeaderLogo>
 
-      <Orders>
-        <img src={ordersIcon} alt="ícone de pedidos feitos de prato" />
-        <div>0</div>
-      </Orders>
+        <Nav isVisible={menuIsVisible}>
+          {user.isAdmin ? (
+            <NewDish to="/new">+ Adicionar novo prato</NewDish>
+          ) : (
+            <Favorites type="button" onClick={functionButton}>
+              Meus favoritos
+            </Favorites>
+          )}
 
+          <Search>
+            {<FiSearch size={20} />}
+            <input
+              type="text"
+              placeholder="Busque pelas opções de pratos"
+              onChange={(e) => {
+                search(e.target.value);
+              }}
+            />
+          </Search>
+
+          {user.isAdmin ? (
+            <Button type="button" onClick={handleGoToOrders}>
+              <img src={receipt} alt="receipt" />
+              pedidos<span>({orders.length})</span>
+            </Button>
+          ) : (
+            <Button
+              type="button"
+              onClick={handleGoToCart}
+              disabled={isCartIsEmpty}
+            >
+              <img src={receipt} alt="receipt" />
+              Meu pedido <span>({cart.length})</span>
+            </Button>
+          )}
+
+          <Logout to="/" onClick={signOut}>
+            <FiLogOut />
+          </Logout>
+        </Nav>
+
+        <button type="button" onClick={() => setMenuIsVisible(!menuIsVisible)}>
+          {menuIsVisible ? <FiX /> : <FiMenu />}
+        </button>
+      </Content>
     </Container>
-  )
+  );
 }
