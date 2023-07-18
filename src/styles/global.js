@@ -1,63 +1,45 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-    :root{
-        font-size: 62.5%;
+  :root {
+    font-size: 62.5%;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, body * {
+    ::-webkit-scrollbar {
+      width: 8px;
     }
-
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    ::-webkit-scrollbar-track {
+      border-radius: 10px;
     }
-
-   body{
-        background-color: ${({ theme }) => theme.COLORS.BG_DARK_400};
-        font-family: "Roboto", sans-serif;
-        color: ${({ theme }) => theme.COLORS.BG_LIGHT_400};
-        font-size: 1.6rem;
-        -webkit-font-smoothing: antialiased;
+    ::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+      border-radius: 8px;
     }
-    
-    a{
-        text-decoration: none;
-        color: ${({ theme }) => theme.COLORS.BG_LIGHT_100};
-        width: 100%;
-        text-align: center;
-    }
-
-
-    ul{
-        list-style: none;
-    }
-    
-    //  Styles button
-    button{
-        border: none;
-    }
-    .bg-tomato-100{
-        background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_100};
-    }
-    .bg-tomato-200{
-        background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_200};
-    }
-    .bg-tomato-400{
-        background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_400};
-    }
-    .bg-dark-800{
-        background-color: ${({ theme }) => theme.COLORS.BG_DARK_800};
-    }
-
-    button, a{
-        cursor: pointer;
-        transition: filter(.2s);
-    }
-
-    button:hover, a:hover{
-        filter: brightness(.9);
-    }
-
-     button, a, h4, h3, h2, p{
-        font-family: "Poppins", sans-serif;
-    }
-`;
+  }
+  body {
+    background-color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+    color: ${({ theme }) => theme.COLORS.WHITE};
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.6rem;
+  }
+  a {
+    text-decoration: none;
+  }
+  button, a {
+    cursor: pointer;
+    transition: filter(0.2s);
+  }
+  button:hover, a:hover {
+    filter: brightness(0.9);
+  }
+  legend, button, a, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+`

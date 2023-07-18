@@ -1,122 +1,153 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
+ width: 100%;
+ min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-
-  .ingredients-tags {
-    width: 100%;
-    height: 4.8rem;
-    display: inline-flex;
-    padding: 0.8rem;
-    align-items: center;
-    gap: 1.6rem;
-
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme.COLORS.BG_DARK_800};
-  }
-`;
+ display: flex;
+ flex-direction: column;
+`
 
 export const Content = styled.main`
-  margin: 11px 32px 179px;
-`;
+ width: 100%;flex: 1;
+ max-width: 136.8rem;
+ height: 100%;
+ padding-inline: 4rem;
+ margin-inline: auto;
+
+
+ @media (min-width: 768px) {
+
+   width: 100%;
+
+   padding-inline: 12.3rem;
+
+ }
+`
+
+export const ButtonBack = styled.div`
+ width: 100%;
+ margin: 2.4rem auto 4rem;
+ display: flex;
+ 
+ > a {
+   display: flex;
+   align-items: center;
+   font-size: clamp(1.8rem, .4rem + 3vw, 2.4rem);
+
+   color: ${({ theme }) => theme.COLORS.WHITE};
+ }
+
+ @media (min-width: 768px) {
+   padding-inline: 0;
+ }
+`
 
 export const Form = styled.form`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 2.4rem;
-  gap: 2.4rem;
+ display: flex;
+ flex-direction: column;
 
-  > header {
-    h2 {
-      font-size: 3.6rem;
-      font-weight: 400;
-      color: ${({ theme }) => theme.COLORS.BG_LIGHT_100};
-    }
-  }
+ > header {
+   legend {
+     font-size: 3.2rem;
+     margin-bottom: 3.2rem;
+   }
+ } 
 
-  .input-image {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-radius: 8px;
+ .smallBox {
+   max-width: 23rem;
 
-    padding: 1.2rem 3.2rem;
-    gap: 0.8rem;
-  }
+   #file {
+     color: ${({ theme }) => theme.COLORS.GRAY_200};
+     display: flex;
+     flex-direction: column;
+     gap: 0.8rem;
 
-  input[type="file"] {
-    display: none;
-  }
-`;
+     div {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       gap: 1rem;
 
-export const SectionInput = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
+       border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+       border-radius: 0.5rem;
+       height: 4.8rem;
+       width: 22.9rem;
 
-  @media (min-width: 768px) {
-    flex-wrap: nowrap;
-    column-gap: 3.2rem;
-  }
+       color: ${({ theme }) => theme.COLORS.WHITE};
+     }
+   }
 
-  .title-section {
-    font-size: 1.6rem;
-  }
-`;
+   input[type="file"] {
+     display: none;
+   }
+ }
 
-export const InputType = styled.input`
-  width: 100%;
-  height: 4.8rem;
-  background-color: ${({ theme }) => theme.COLORS.BG_DARK_800};
-  padding: 1.6rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1.6rem;
+ > button {
+   margin-top: 2.4rem;
+   height: 4.8rem;
+   width: 100%;
+   background: #1A2327;
+   border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+   border-radius: 0.5rem;
+   color: ${({ theme }) => theme.COLORS.WHITE};
 
-  &:focus {
-    outline-color: ${({ theme }) => theme.COLORS.BG_DARK_1000};
-    caret-color: ${({ theme }) => theme.COLORS.BG_LIGHT_100};
-    color: ${({ theme }) => theme.COLORS.BG_LIGHT_100};
-  }
-`;
-export const SelectWrapper = styled.div`
-  width: 100%;
-  position: relative;
-  display: inline-block;
+   align-self: flex-end;
 
-  .icon-down {
-    position: absolute;
-    right: 1.6rem;
-    top: 1.2rem;
-    bottom: 1.2rem;
-  }
-`;
+   &:disabled {
+     opacity: 0.5;
+     cursor: not-allowed;
+   }
 
-export const Select = styled.select`
-  width: 100%;
-  height: 4.8rem;
-  background-color: ${({ theme }) => theme.COLORS.BG_DARK_900};
-  border: none;
-  padding: 1.6rem;
+   @media (min-width: 768px) {
+     width: 35.7rem;
+   }
 
-  font-size: 1.6rem;
-  color: ${({ theme }) => theme.COLORS.BG_LIGHT_400};
+ }
 
-  align-self: stretch;
-  border-radius: 8px;
+`
 
-  &:focus {
-    outline: none;
-  }
+export const InputWrapper = styled.div`
+ display: flex;
+ flex-wrap: wrap;
+ 
+ margin-bottom: 4rem;
 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-`;
+ gap: 4rem;
+
+ @media (min-width: 768px) {
+   flex-wrap: nowrap;
+   column-gap: 3.2rem;
+ }
+`
+
+export const SectionIngredients = styled.div`
+ width: 100%;
+ height: 4.8rem;
+ display: flex;
+ flex-direction: column;
+ gap: 0.8rem;
+ color: ${({ theme }) => theme.COLORS.GRAY_200};
+
+ margin-bottom: 4rem;
+
+ > div {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   max-height: max-content;
+   padding: 0.8rem;
+
+   border: 1px solid ${({ theme }) => theme.COLORS.WHITE};
+   border-radius: 0.5rem;
+ }
+
+ @media (min-width: 768px) {
+   margin-bottom: 0;
+
+   > div {
+     max-height: 4.8rem;
+     gap: 2rem;
+   }
+ }
+`

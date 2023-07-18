@@ -1,16 +1,19 @@
-import { Container } from "./styles";
-import { Icon } from "./styles";
+import { Container } from './styles';
 
-export function Button({ title, loading = false, icon, alt, ...rest }) {
+export function Button({title, image, isInvisible = false, ...rest}) {
   return (
     <Container
-      className="bg-tomato-100"
       type="button"
-      disabled={loading}
+      isInvisible={isInvisible}
       {...rest}
     >
-      {icon && <Icon src={icon} alt={alt} />}
-      {loading ? "Carregando" : title}
+      {
+        image ?
+        <img src={image} alt="ícone do botão"/>
+        :
+        ''
+      }
+      {title}
     </Container>
-  );
+  )
 }
