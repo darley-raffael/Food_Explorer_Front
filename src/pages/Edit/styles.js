@@ -18,6 +18,17 @@ export const Container = styled.div`
     border-radius: 8px;
     background-color: ${({ theme }) => theme.COLORS.BG_DARK_800};
   }
+
+  .btn-list {
+    width: 100%;
+    display: flex;
+
+    gap: 3.2rem;
+
+    > button {
+      font-size: 1.1rem;
+    }
+  }
 `;
 
 export const Content = styled.main`

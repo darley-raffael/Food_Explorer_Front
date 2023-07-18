@@ -15,7 +15,7 @@ import { IngredientItem } from "../../components/IngredientItem";
 import { Textarea } from "../../components/Textarea";
 import { Button } from "../../components/Button";
 
-export function New() {
+export function Edit() {
   return (
     <Container>
       <Header />
@@ -23,7 +23,7 @@ export function New() {
         <BackButton small fontSize={"1.6"} />
         <Form>
           <header>
-            <h2>Novo Prato</h2>
+            <h2>Editar Prato</h2>
           </header>
 
           <SectionInput>
@@ -74,7 +74,10 @@ export function New() {
             placeholder="Fale brevemente sobre o prato, seus ingredientes e composição"
           />
 
-          <Button className="bg-tomato-400" title="Salvar Alterações" />
+          <div className="btn-list">
+            <Button className="bg-dark-800" title="Excluir Prato" />
+            <Button className="bg-tomato-400" title="Salvar Alterações" />
+          </div>
         </Form>
       </Content>
       <Footer />

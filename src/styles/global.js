@@ -44,6 +44,9 @@ export default createGlobalStyle`
     .bg-tomato-400{
         background-color: ${({ theme }) => theme.COLORS.TINTS_TOMATO_400};
     }
+    .bg-dark-800{
+        background-color: ${({ theme }) => theme.COLORS.BG_DARK_800};
+    }
 
     button, a{
         cursor: pointer;

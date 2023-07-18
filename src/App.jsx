@@ -1,9 +1,8 @@
-import { New } from "./pages/New";
-
+import { Edit } from "./pages/Edit";
 export function App() {
   return (
     <>
-      <New />
+      <Edit />
     </>
   );
 }

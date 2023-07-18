@@ -2,7 +2,7 @@ import { FiPlus, FiX } from "react-icons/fi";
 
 import { Container } from "./styles";
 
-export function IngredientTag({ isNew = false, value, onClick, ...rest }) {
+export function IngredientItem({ isNew, value, onClick, ...rest }) {
   return (
     <Container isNew={isNew}>
       <input type="text" value={value} readOnly={!isNew} {...rest} />
@@ -12,7 +12,7 @@ export function IngredientTag({ isNew = false, value, onClick, ...rest }) {
         onClick={onClick}
         className={isNew ? "button-add" : "button-delete"}
       >
-        {isNew ? <FiPlus /> : <FiX />}
+        {isNew ? <FiPlus color="#ffffff" /> : <FiX />}
       </button>
     </Container>
   );
